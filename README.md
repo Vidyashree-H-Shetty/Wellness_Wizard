@@ -29,7 +29,7 @@ Wellness Wizard is a comprehensive health and wellness platform that provides AI
 
 ### Setup
 1. Clone the repository:
-   git clone 
+   git clone https://github.com/Vidyashree-H-Shetty/Wellness_Wizard.git
    cd wellness-wizard
    
 2. Install dependencies:
