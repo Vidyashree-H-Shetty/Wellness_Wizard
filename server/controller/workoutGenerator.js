@@ -22,7 +22,7 @@ Please provide a structured workout plan that includes:
 7. Warm-up and cool-down routines`;
 
     try {
-        const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+        const model =genAI.getGenerativeModel({model:'gemini-1.5-flash'});
 
         const result = await model.generateContent({
             contents: [{ 
