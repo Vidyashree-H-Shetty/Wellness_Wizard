@@ -23,7 +23,7 @@ const bodyParser = require('body-parser');
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
 const workoutRoutes = require('./server/routes/workoutRoutes');
@@ -212,8 +212,8 @@ if (missingEnvVars.length > 0) {
 }
 
 
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
+const port = process.env.PORT || 8080; // Render prefers 8080
+app.listen(port, '0.0.0.0', () => {
   console.log(`Server running on port ${port}`);
 });
 
