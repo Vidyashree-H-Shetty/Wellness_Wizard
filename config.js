@@ -1,11 +1,12 @@
-const { Pool } = require('pg');
 require('dotenv').config();
+const { Pool } = require('pg');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
+// Use DATABASE_URL directly from Render's environment variables
 const pool = new Pool({
-  connectionString: isProduction ? process.env.DATABASE_URL : `postgresql://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_DATABASE}`,
-  ssl: isProduction ? { rejectUnauthorized: false } : false, // Ensure compatibility with Render's database
+  connectionString: process.env.DATABASE_URL,
+  ssl: isProduction ? { rejectUnauthorized: false } : false, // Required for Render
 });
 
 module.exports = { pool };
