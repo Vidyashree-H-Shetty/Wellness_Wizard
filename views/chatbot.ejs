@@ -95,12 +95,8 @@
             addMessage('user', userMessage);
 
             inputField.value = '';
-
-            const backendUrl = window.location.origin.includes("localhost")
-            ? "http://localhost:3000"  // Development (Local)
-            : "https://wellness-wizard.onrender.com";  // Production (Render)
             
-            fetch(`${backendUrl}/api/chatbot/wellness-chat`, {
+            fetch('https://wellness-wizard.onrender.com/api/chatbot/wellness-chat', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ category: selectedCategory, prompt: userMessage }),
