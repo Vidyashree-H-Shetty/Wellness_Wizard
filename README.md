@@ -38,6 +38,16 @@ Wellness Wizard is a comprehensive health and wellness platform that provides AI
 3. Set up the database:
    - Create a PostgreSQL database.
    - Configure the database connection in .env file.
+   NODE_ENV=development
+   DB_USER=
+   DB_PASSWORD=
+   DB_HOST=
+   DB_PORT=
+   DB_DATABASE=
+   DATABASE_URL=
+   SESSION_SECRET=
+   GOOGLE_API_KEY=
+
 4. Run the backend server:
    node server.js
    
