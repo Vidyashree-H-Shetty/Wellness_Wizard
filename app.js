@@ -188,6 +188,7 @@ function checkAuthenticated(req, res, next) {
 }
 
 function checkNotAuthenticated(req, res, next) {
+  console.log("User is authenticated:", req.isAuthenticated());
   if (req.isAuthenticated()) {
     return next();
   }
