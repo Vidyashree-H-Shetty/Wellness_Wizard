@@ -96,11 +96,13 @@
 
             inputField.value = '';
 
-            fetch('https://wellness-wizard.onrender.com/api/chatbot/wellness-chat', {
+            const backendUrl = window.location.origin.includes("localhost")
+            ? "http://localhost:3000"  // Development (Local)
+            : "https://wellness-wizard.onrender.com";  // Production (Render)
+            
+            fetch(`${backendUrl}/api/chatbot/wellness-chat`, {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ category: selectedCategory, prompt: userMessage }),
             })
             .then(response => response.text())
