@@ -184,14 +184,16 @@
     };
      
 
+    const backendUrl = window.location.origin.includes("localhost") 
+        ? "http://localhost:3000" 
+        : "https://wellness-wizard.onrender.com";
+
     try {
-    const response = await fetch('http://localhost:3000/api/workouts/generate-workout', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData)
-    });
+        const response = await fetch(`${backendUrl}/api/workouts/generate-workout`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData)
+        });
 
     if (!response.ok) {
         throw new Error(`Error: ${response.status} - ${response.statusText}`);
