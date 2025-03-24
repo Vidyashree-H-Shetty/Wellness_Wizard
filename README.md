@@ -3,11 +3,11 @@
 Wellness Wizard is a comprehensive health and wellness platform that provides AI-powered diet recommendations, workout plans, and an intelligent chatbot to support users in their fitness journey.
 
 ## Features
-- *AI Diet Recommendation*: Personalized meal plans generated using Gemini AI.
-- *Workout Recommendation*: AI-powered exercise plans based on user goals.
-- *AI Chatbot*: Interactive chatbot for health and wellness queries.
-- *User Authentication*: Secure login and registration system.
-- *Progress Tracking*: Users can track their fitness journey over time.
+- **AI Diet Recommendation**: Personalized meal plans generated using Gemini AI.
+- **Workout Recommendation**: AI-powered exercise plans based on user goals.
+- **AI Chatbot**: Interactive chatbot for health and wellness queries.
+- **User Authentication**: Secure login and registration system.
+- **Progress Tracking**: Users can track their fitness journey over time.
 
 ## Tech Stack
 ### Frontend:
@@ -28,39 +28,42 @@ Wellness Wizard is a comprehensive health and wellness platform that provides AI
 - PostgreSQL
 
 ### Setup
-1. Clone the repository:
+1. **Clone the repository**:
+   ```sh
    git clone https://github.com/Vidyashree-H-Shetty/Wellness_Wizard.git
    cd wellness-wizard
-   
-2. Install dependencies:
+   ```
+
+2. **Install dependencies**:
+   ```sh
    npm install
-   
-3. Set up the database:
+   ```
+
+3. **Set up the database**:
    - Create a PostgreSQL database.
-   - Configure the database connection in .env file.
+   - Configure the database connection in `.env` file.
 
-      NODE_ENV=development
-     
-      DB_USER
-     
-      DB_PASSWORD
-      
-      DB_HOST
-      
-      DB_PORT
-      
-      DB_DATABASE
-      
-      DATABASE_URL
-      
-      SESSION_SECRET
-      
-      GOOGLE_API_KEY
+   Example `.env` file:
+   ```env
+   NODE_ENV=development
+   DB_USER=your_db_user
+   DB_PASSWORD=your_db_password
+   DB_HOST=your_db_host
+   DB_PORT=your_db_port
+   DB_DATABASE=your_db_name
+   DATABASE_URL=your_database_url
+   SESSION_SECRET=your_session_secret
+   GOOGLE_API_KEY=your_google_api_key
+   ```
 
-5. Run the backend server:
+4. **Run the backend server**:
+   ```sh
    node server.js
-   
-6. Open index.html in a browser to access the frontend.
+   ```
+## **Deployment(Live Demo)**:
+   ```sh
+   https://wellness-wizard.onrender.com
+   ```  
 
 ## Usage
 1. Register and log in to your account.
@@ -72,4 +75,5 @@ Wellness Wizard is a comprehensive health and wellness platform that provides AI
 Contributions are welcome! Please submit a pull request or open an issue for improvements.
 
 ## Contact
-For any inquiries, reach out at vidyashreehshetty2917@gmail.com
+For any inquiries, reach out at [vidyashreehshetty2917@gmail.com](mailto:vidyashreehshetty2917@gmail.com).
+
